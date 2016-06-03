@@ -1,0 +1,31 @@
+
+$screen-md-min: 600px;
+$screen-lg-min: 1280px;
+$screen-xl-min: 1920px;
+
+@mixin media-query($target-width) {
+	@media all and (min-width: $target-width) {
+		@content;
+	}
+}
+
+@mixin sm() {
+	@include media-query($layout-breakpoint-xs) { @content }
+}
+
+@mixin md() {
+	@include media-query($layout-breakpoint-sm) { @content }
+}
+
+@mixin lg() {
+	@include media-query($layout-breakpoint-md) { @content }
+}
+
+@mixin xl() {
+	@include media-query($layout-breakpoint-lg) { @content }
+}
+
+.img-responsive {
+	max-width: 100%;
+	height: auto;
+}

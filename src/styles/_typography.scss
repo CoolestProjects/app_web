@@ -1,0 +1,22 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700);
+
+$sans: 'Open Sans', sans-serif;
+$light: 300;
+$normal: 400;
+$semiBold: 600;
+$bold: bold;
+$extraBold: 800;
+
+html {
+	font-family: $sans;
+	font-weight: $normal;
+}
+
+.text-center {
+	text-align: center;
+}
+
+h1, h2 {
+	color: grey;
+}

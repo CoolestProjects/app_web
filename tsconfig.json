@@ -1,0 +1,41 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"inlineSourceMap": true,
+		"target": "es6",
+		"removeComments": true,
+		"listFiles": true,
+		"outDir": "./www"
+	},
+	"files": [
+		
+		"./typings/browser.d.ts",
+		"./src/custom-typings/index.d.ts",
+		"./src/app.ts",
+		
+		"./src/data/index.ts",
+		"./src/data/endpoints.ts",
+		"./src/data/flash.ts",
+		"./src/data/utils.ts",
+		
+		"./src/modules/app/app-module.ts",
+		"./src/modules/app/app-config.ts",
+		"./src/modules/app/app-controller.ts",
+		
+		"./src/modules/app/config/snapshot.ts",
+		"./src/modules/app/config/production.ts",
+		
+		"./src/modules/app/nav/nav-module.ts",
+		"./src/modules/app/nav/nav-config.ts",
+		"./src/modules/app/nav/sidenav/sidenav-controller.ts",
+		"./src/modules/app/nav/toolbar/toolbar-controller.ts",
+		
+		"./src/modules/utils/utils-module.ts",
+		"./src/modules/utils/datetime-util-service.ts",
+		
+		"./src/modules/utils/flash/flash-module.ts",
+		"./src/modules/utils/flash/flash-controller.ts",
+		"./src/modules/utils/flash/flash-service.ts"
+		
+	]
+}

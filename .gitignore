@@ -1,0 +1,15 @@
+
+# Cordova
+hooks/
+platforms/
+plugins/
+
+# Dependencies
+node_modules/
+typings/
+
+# Build
+www/
+
+# VS Code
+.vscode/
