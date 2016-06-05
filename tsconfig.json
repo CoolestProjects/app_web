@@ -35,7 +35,11 @@
 		
 		"./src/modules/utils/flash/flash-module.ts",
 		"./src/modules/utils/flash/flash-controller.ts",
-		"./src/modules/utils/flash/flash-service.ts"
+		"./src/modules/utils/flash/flash-service.ts",
+		
+		"./src/modules/projects/projects-module.ts",
+		"./src/modules/projects/projects-config.ts",
+		"./src/modules/projects/projects-controller.ts"
 		
 	]
 }

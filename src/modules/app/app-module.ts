@@ -23,6 +23,7 @@ require('angular-material-data-table/dist/md-data-table.css');
 require('config');
 require('../nav/nav-module.ts');
 require('../utils/utils-module.ts');
+require('../projects/projects-module.ts');
 
 /**
  * Imports
@@ -33,7 +34,8 @@ import AppController from './app-controller';
 angular.module('App', [
 	'ngAnimate', 'ngAria', 'ngMessages', 'ngLocale', 'ngCookies',
 	'ngMaterial', 'ui.router', 'md.data.table',
-	'App.Config', 'App.Nav', 'App.Utils'
+	'App.Config', 'App.Nav', 'App.Utils',
+	'App.Projects'
 ])
 	.config(AppConfig)
 	.controller('AppController', AppController);

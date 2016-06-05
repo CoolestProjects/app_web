@@ -34,4 +34,9 @@ export default class AdminSidenavController {
 		this.closeSidenav();
 	}
 
+	public goToProjectsState(): void {
+		this.$state.go('App.Nav.Projects');
+		this.closeSidenav();
+	}
+
 }
