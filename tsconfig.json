@@ -9,7 +9,7 @@
 	},
 	"files": [
 		
-		"./typings/browser.d.ts",
+		"./typings/index.d.ts",
 		"./src/custom-typings/index.d.ts",
 		"./src/app.ts",
 		
@@ -34,6 +34,10 @@
 		"./src/modules/utils/flash/flash-module.ts",
 		"./src/modules/utils/flash/flash-controller.ts",
 		"./src/modules/utils/flash/flash-service.ts",
+		
+		"./src/modules/firebase/index.ts",
+		"./src/modules/firebase/firebase-module.ts",
+		"./src/modules/firebase/firebase-service.ts",
 		
 		"./src/modules/projects/index.ts",
 		"./src/modules/projects/projects-module.ts",

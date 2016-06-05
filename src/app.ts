@@ -3,6 +3,7 @@
  * Libraries
  */
 require('moment');
+require('firebase');
 
 /**
  * App

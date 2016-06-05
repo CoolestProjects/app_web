@@ -16,13 +16,15 @@ require('angular-i18n/en-ie.js');
 require('angular-material');
 require('angular-material-data-table');
 require('angular-material-data-table/dist/md-data-table.css');
+require('angularfire');
 
 /**
- * App Modules
+ * Modules
  */
 require('config');
 require('../nav/nav-module.ts');
 require('../utils/utils-module.ts');
+require('../firebase/firebase-module.ts');
 require('../home/home-module.ts');
 require('../speakers/speakers-module.ts');
 require('../projects/projects-module.ts');
@@ -35,8 +37,8 @@ import AppController from './app-controller';
 
 angular.module('App', [
 	'ngAnimate', 'ngAria', 'ngMessages', 'ngLocale', 'ngCookies',
-	'ngMaterial', 'ui.router', 'md.data.table',
-	'App.Config', 'App.Nav', 'App.Utils',
+	'ngMaterial', 'ui.router', 'md.data.table', 'firebase',
+	'App.Config', 'App.Nav', 'App.Utils', 'App.Firebase',
 	'App.Home', 'App.Speakers', 'App.Projects'
 ])
 	.config(AppConfig)

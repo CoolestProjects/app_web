@@ -5,6 +5,8 @@
     "angular-cookies": "registry:dt/angular-cookies#1.4.0+20160317120654",
     "angular-material": "registry:dt/angular-material#1.0.0-rc5.0+20160602130258",
     "angular-ui-router": "registry:dt/angular-ui-router#1.1.5+20160521151413",
+    "angularfire": "registry:dt/angularfire#0.8.2+20160316155526",
+    "firebase": "registry:dt/firebase#2.4.1+20160412125105",
     "jquery": "registry:dt/jquery#1.10.0+20160417213236",
     "moment-node": "registry:dt/moment-node#2.11.1+20160511043338"
   }
