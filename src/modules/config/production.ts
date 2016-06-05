@@ -1,6 +1,6 @@
 
 angular.module('App.Config', [])
 	.constant('ENDPOINTS', {
-		Projects: '',
-		Firebase: ''
+		CoolestProjects: 'https://register.coolestprojects.org/api/',
+		CoolestProjectFirebase: 'https://coolestprojectsapp.firebaseio.com/'
 	});
