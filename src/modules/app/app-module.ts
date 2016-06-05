@@ -24,6 +24,7 @@ require('config');
 require('../nav/nav-module.ts');
 require('../utils/utils-module.ts');
 require('../home/home-module.ts');
+require('../speakers/speakers-module.ts');
 require('../projects/projects-module.ts');
 
 /**
@@ -36,7 +37,7 @@ angular.module('App', [
 	'ngAnimate', 'ngAria', 'ngMessages', 'ngLocale', 'ngCookies',
 	'ngMaterial', 'ui.router', 'md.data.table',
 	'App.Config', 'App.Nav', 'App.Utils',
-	'App.Home', 'App.Projects'
+	'App.Home', 'App.Speakers', 'App.Projects'
 ])
 	.config(AppConfig)
 	.controller('AppController', AppController);

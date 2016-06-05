@@ -43,7 +43,11 @@
 		
 		"./src/modules/home/home-module.ts",
 		"./src/modules/home/home-config.ts",
-		"./src/modules/home/home-controller.ts"
+		"./src/modules/home/home-controller.ts",
+		
+		"./src/modules/speakers/speakers-module.ts",
+		"./src/modules/speakers/speakers-config.ts",
+		"./src/modules/speakers/speakers-controller.ts"
 		
 	]
 }
