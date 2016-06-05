@@ -22,13 +22,13 @@
 		"./src/modules/app/app-config.ts",
 		"./src/modules/app/app-controller.ts",
 		
-		"./src/modules/app/config/snapshot.ts",
-		"./src/modules/app/config/production.ts",
+		"./src/modules/config/snapshot.ts",
+		"./src/modules/config/production.ts",
 		
-		"./src/modules/app/nav/nav-module.ts",
-		"./src/modules/app/nav/nav-config.ts",
-		"./src/modules/app/nav/sidenav/sidenav-controller.ts",
-		"./src/modules/app/nav/toolbar/toolbar-controller.ts",
+		"./src/modules/nav/nav-module.ts",
+		"./src/modules/nav/nav-config.ts",
+		"./src/modules/nav/sidenav/sidenav-controller.ts",
+		"./src/modules/nav/toolbar/toolbar-controller.ts",
 		
 		"./src/modules/utils/utils-module.ts",
 		"./src/modules/utils/datetime-util-service.ts",

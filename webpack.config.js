@@ -16,7 +16,7 @@ module.exports = {
 	resolve: {
 		extensions: ['', '.webpack.js', '.web.js', '.ts', '.js'],
 		alias: {
-			config: path.join(__dirname, 'src', 'modules', 'app', 'config', process.env.NODE_ENV + '.ts')
+			config: path.join(__dirname, 'src', 'modules', 'config', process.env.NODE_ENV + '.ts')
 		}
 	},
 	plugins: [

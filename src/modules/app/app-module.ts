@@ -21,11 +21,7 @@ require('angular-material-data-table/dist/md-data-table.css');
  * App Modules
  */
 require('config');
-require('./nav/nav-module.ts');
-
-/**
- *  Other Modules
- */
+require('../nav/nav-module.ts');
 require('../utils/utils-module.ts');
 
 /**
