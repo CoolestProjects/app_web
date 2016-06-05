@@ -1,7 +1,7 @@
 
 import {material} from 'angular';
 
-import {IFlashContent} from '../../../data';
+import {IFlashContent} from './';
 
 export default class FlashController {
 

@@ -1,5 +1,5 @@
 
-import {IDatetimeUtilService} from '../../data';
+import {IDatetimeUtilService} from './';
 
 export default class DatetimeUtilService implements IDatetimeUtilService {
 

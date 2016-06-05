@@ -1,7 +1,7 @@
 
 import {material} from 'angular';
 
-import {IFlashContent, IFlashService} from '../../../data';
+import {IFlashContent, IFlashService} from './';
 
 export default class FlashService implements IFlashService {
 

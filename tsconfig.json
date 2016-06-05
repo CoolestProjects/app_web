@@ -13,11 +13,6 @@
 		"./src/custom-typings/index.d.ts",
 		"./src/app.ts",
 		
-		"./src/data/index.ts",
-		"./src/data/endpoints.ts",
-		"./src/data/flash.ts",
-		"./src/data/utils.ts",
-		
 		"./src/modules/app/app-module.ts",
 		"./src/modules/app/app-config.ts",
 		"./src/modules/app/app-controller.ts",
@@ -31,9 +26,11 @@
 		"./src/modules/nav/sidenav/sidenav-controller.ts",
 		"./src/modules/nav/toolbar/toolbar-controller.ts",
 		
+		"./src/modules/utils/index.ts",
 		"./src/modules/utils/utils-module.ts",
 		"./src/modules/utils/datetime-util-service.ts",
 		
+		"./src/modules/utils/flash/index.ts",
 		"./src/modules/utils/flash/flash-module.ts",
 		"./src/modules/utils/flash/flash-controller.ts",
 		"./src/modules/utils/flash/flash-service.ts",
