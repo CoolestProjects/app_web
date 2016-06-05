@@ -8,7 +8,7 @@ let sidenavTemplate: string = require('./sidenav/sidenav-template.html');
 let toolbarTemplate: string = require('./toolbar/toolbar-template.html');
 let navState: IState = {
 	name: 'App.Nav',
-	// abstract: true,
+	abstract: true,
 	url: '/',
 	views: {
 		'sidenav': {

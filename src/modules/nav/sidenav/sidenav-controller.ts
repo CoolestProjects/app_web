@@ -29,8 +29,8 @@ export default class AdminSidenavController {
 		if (this.isSidenavOpen()) { this.$mdSidenav('sidenav').close(); }
 	}
 
-	public goToIndexState(): void {
-		this.$state.go('App.Nav.Index');
+	public goToHomeState(): void {
+		this.$state.go('App.Nav.Home');
 		this.closeSidenav();
 	}
 

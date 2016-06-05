@@ -39,7 +39,11 @@
 		
 		"./src/modules/projects/projects-module.ts",
 		"./src/modules/projects/projects-config.ts",
-		"./src/modules/projects/projects-controller.ts"
+		"./src/modules/projects/projects-controller.ts",
+		
+		"./src/modules/home/home-module.ts",
+		"./src/modules/home/home-config.ts",
+		"./src/modules/home/home-controller.ts"
 		
 	]
 }
