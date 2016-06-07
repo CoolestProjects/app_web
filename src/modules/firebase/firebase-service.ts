@@ -16,7 +16,7 @@ export class FirebaseService implements IFirebaseService {
 
 	constructor(ENDPOINTS: IEndpointsConstant) {
 		this.ENDPOINTS = ENDPOINTS;
-		this.baseRef = new Firebase(ENDPOINTS.CoolestProjectFirebase);
+		this.baseRef = new Firebase(ENDPOINTS.CoolestProjectsFirebase);
 		this.speakersRef = this.baseRef.child('speakers');
 	}
 	

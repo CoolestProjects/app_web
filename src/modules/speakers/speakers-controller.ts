@@ -1,10 +1,11 @@
 
-import {ISpeakersService} from './';
+import {IHttpPromiseCallbackArg} from 'angular';
+import {ISpeakersService, ISpeaker} from './';
 
 export default class SpeakersController {
 
 	public $inject: string[] = ['speakersService'];
-	public speakers: AngularFireArray;
+	public speakers: ISpeaker[];
 
 	private speakersService: ISpeakersService;
 
@@ -14,8 +15,11 @@ export default class SpeakersController {
 	}
 
 	public getAllSpeakers(): void {
-		this.speakers = this.speakersService.getAll();
-		console.log('Speakers', this.speakers);
+		this.speakersService.getAll()
+			.then((res: IHttpPromiseCallbackArg<ISpeaker[]>) => {
+				this.speakers = res.data;
+				console.log('Speakers', this.speakers);
+			});
 	}
 	
 }

@@ -32,7 +32,7 @@ export class ProjectsService implements IProjectsService {
 	}
 
 	public getAll(): IHttpPromise<IProject[]> {
-		return this.$http.get(`${this.ENDPOINTS.CoolestProjects}project/summary`);
+		return this.$http.get(`${this.ENDPOINTS.CoolestProjects}/project/summary`);
 	}
 	
 }

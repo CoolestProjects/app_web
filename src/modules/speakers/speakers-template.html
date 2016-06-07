@@ -1,4 +1,21 @@
 <!-- TODO -->
 <div>
 	<h1>Speakers</h1>
+	<div layout="column" flex-xs flex-gt-xs="50">
+		<md-card ng-repeat="speaker in speakersCtrl.speakers" ng-cloak>
+
+			<img ng-src="{{speaker.photoUrl}}" class="md-card-image">
+			<md-card-title>
+				<md-card-title>
+					<span class="md-headline">{{speaker.name}}</span>
+				</md-card-title>
+			</md-card-title>
+
+			<md-card-content>
+				<p>{{speaker.description}}</p>
+				<p>{{speaker.summit}}</p>
+			</md-card-content>
+
+		</md-card>
+	</div>
 </div>

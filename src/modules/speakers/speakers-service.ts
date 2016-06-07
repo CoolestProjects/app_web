@@ -1,5 +1,6 @@
 
-import {IFirebaseService} from '../firebase';
+import {IHttpService, IHttpPromise} from 'angular';
+import {IEndpointsConstant} from '../config';
 
 export interface ISpeaker {
 	name: string;
@@ -10,26 +11,26 @@ export interface ISpeaker {
 }
 
 export interface ISpeakersService {
-	getAll(): AngularFireArray;
+	getAll(): IHttpPromise<ISpeaker[]>;
 }
 
 export class SpeakersService implements ISpeakersService {
 	
-	public $inject: string[] = ['firebaseService', '$firebaseArray'];
-	
-	private $firebaseArray: AngularFireArrayService;
-	private ref: Firebase;
+	public $inject: string[] = ['$http', 'ENDPOINTS'];
+
+	private $http: IHttpService;
+	private ENDPOINTS: IEndpointsConstant;
 	
 	constructor(
-		firebaseService: IFirebaseService,
-		$firebaseArray: AngularFireArrayService
+		$http: IHttpService,
+		ENDPOINTS: IEndpointsConstant
 	) {
-		this.ref = firebaseService.speakersRef;
-		this.$firebaseArray = $firebaseArray;
+		this.$http = $http;
+		this.ENDPOINTS = ENDPOINTS;
 	}
 	
-	public getAll(): AngularFireArray {
-		return this.$firebaseArray(this.ref);
+	public getAll(): IHttpPromise<ISpeaker[]> {
+		return this.$http.get(`${this.ENDPOINTS.CoolestProjectsFirebase}/speakers.json`);
 	}
 	
 }

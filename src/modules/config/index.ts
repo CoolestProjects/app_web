@@ -1,5 +1,5 @@
 
 export interface IEndpointsConstant {
 	CoolestProjects: string;
-	CoolestProjectFirebase: string;
+	CoolestProjectsFirebase: string;
 }
