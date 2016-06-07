@@ -17,6 +17,19 @@ html {
 	text-align: center;
 }
 
-h1, h2 {
+.text-grey {
 	color: grey;
+}
+
+.text-bold {
+	font-weight: $bold;
+}
+
+.text-extra-bold {
+	font-weight: $extraBold;
+}
+
+h1, h2 {
+	@extend .text-grey;
+	@extend .text-center;
 }
