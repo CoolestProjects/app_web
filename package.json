@@ -47,7 +47,7 @@
   "scripts": {
     "postinstall": "typings install",
     "build": "webpack",
-    "start": "webpack-dev-server --content-base www --inline",
+    "start": "webpack-dev-server --content-base www --inline -d",
     "prestart:browser": "npm run build",
     "start:browser": "cordova run browser",
     "prestart:ripple": "npm run build",

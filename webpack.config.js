@@ -10,9 +10,11 @@ module.exports = {
 	output: {
 		path: './www/',
 		filename: '[name].js',
-		sourceMapFilename: '[name].js'
+		sourceMapFilename: '[name].map.js'
 	},
+	target: 'web',
 	debug: true,
+	devtool: 'source-map',
 	resolve: {
 		extensions: ['', '.webpack.js', '.web.js', '.ts', '.js'],
 		alias: {
@@ -34,7 +36,7 @@ module.exports = {
 		postcss: [
 			AutoPrefixer({browsers: [
 					'last 2 Chrome versions', 'last 2 Firefox versions',
-					'Explorer >= 9', 'last 2 Edge versions',
+					'Explorer >= 10', 'last 2 Edge versions',
 					'last 2 iOS versions', 'last 2 Safari versions'
 			]})
 		]

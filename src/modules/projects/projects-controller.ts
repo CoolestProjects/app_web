@@ -1,6 +1,6 @@
 
 import {IHttpPromiseCallbackArg} from 'angular';
-import {IProjectsService, IProject} from './projects-service';
+import {IProjectsService, IProject} from './';
 
 export default class ProjectsController {
 
