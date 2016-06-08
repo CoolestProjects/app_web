@@ -13,13 +13,34 @@ html {
 	font-weight: $normal;
 }
 
+/**
+ * Alignment
+  */
+
 .text-center {
 	text-align: center;
 }
 
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+
+/**
+ * Color
+ */
+
 .text-grey {
 	color: grey;
 }
+
+/**
+ * Weight
+  */
 
 .text-bold {
 	font-weight: $bold;

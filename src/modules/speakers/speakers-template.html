@@ -1,18 +1,28 @@
 <div flex layout="row" layout-align="center">
 
-	<div layout="column" flex-xs flex-gt-xs="75" flex-gt-sm="50">
+	<div layout="column" flex-xs flex-gt-xs="75" flex-gt-sm="50" flex-gt-md="33">
 
 		<md-card ng-repeat="speaker in speakersCtrl.speakers">
 
-			<img ng-src="{{speaker.photoUrl}}" class="md-card-image">
+			<span hide show-xs>
+				<img ng-src="{{speaker.photoUrl}}" class="md-card-image">
+			</span>
 
 			<md-card-title>
-				<md-card-title layout="row" layout-align="center">
+
+				<md-card-title-text layout="row" layout-align="center center">
 					<span class="md-display-1">{{speaker.name}}</span>
-				</md-card-title>
+				</md-card-title-text>
+
+				<md-card-title-media hide-xs>
+					<div class="md-media-lg card-media">
+						<img ng-src="{{speaker.photoUrl}}" class="md-card-image">
+					</div>
+				</md-card-title-media>
+
 			</md-card-title>
 
-			<md-card-content class="text-center text-grey">
+			<md-card-content class="text-grey text-right">
 				<p class="md-headline text-extra-bold">{{speaker.description}}</p>
 				<p class="md-headline text-bold">{{speaker.summit}}</p>
 			</md-card-content>
