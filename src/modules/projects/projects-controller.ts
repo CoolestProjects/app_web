@@ -18,7 +18,6 @@ export default class ProjectsController {
 		this.projectsService.getAll()
 			.then((res: IHttpPromiseCallbackArg<IProject[]>) => {
 				this.projects = res.data;
-				console.log('Projects', this.projects);
 			});
 	}
 	

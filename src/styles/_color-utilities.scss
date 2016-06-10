@@ -1,0 +1,30 @@
+.text-grey {
+	color: grey;
+}
+
+.text-white {
+	color: white;
+}
+
+.text-yellow {
+	color: $coolestProjectsYellow;
+}
+
+.background-black {
+	background-color: black;
+}
+
+.background-white {
+	background-color: white;
+}
+
+.coolest-projects-sidenav {
+	md-list-item {
+		&:hover {
+			@extend .text-yellow;
+			md-icon {
+				@extend .text-yellow;
+			}
+		}
+	}
+}

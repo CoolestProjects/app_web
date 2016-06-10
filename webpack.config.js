@@ -30,7 +30,7 @@ module.exports = {
 			{ test: /\.ts$/, loader: 'babel?presets[]=es2015!ts!tslint' },
 			{ test: /\.css$/, loader: 'style!css!postcss' },
 			{ test: /\.scss$/, loader: 'style!css!postcss!sass' },
-			{ test: /\.(gpg|jpeg|png|gif|svg)$/i, loader:'file' },
+			{ test: /\.(jpg|jpeg|png|gif|svg)$/i, loader:'file' },
 			{ test   : /\.(otf|eot|svg|ttf|woff|woff2)/i, loader : 'file' }
 		],
 		postcss: [

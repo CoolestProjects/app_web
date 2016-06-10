@@ -18,7 +18,6 @@ export default class SpeakersController {
 		this.speakersService.getAll()
 			.then((res: IHttpPromiseCallbackArg<ISpeaker[]>) => {
 				this.speakers = res.data;
-				console.log('Speakers', this.speakers);
 			});
 	}
 	

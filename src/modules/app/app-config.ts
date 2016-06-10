@@ -21,13 +21,13 @@ export default function AppConfig(
 	$httpProvider: IHttpProvider
 ): void {
 	$stateProvider.state(appState);
-	$mdThemingProvider.definePalette('Big-Bin-Tipp-Palette', {
+	$mdThemingProvider.definePalette('Coolest-Projects-Palette', {
 		'50': '#d0ebff',
 		'100': '#84cbff',
 		'200': '#4cb3ff',
 		'300': '#0495ff',
 		'400': '#0084e5',
-		'500': '#0072c6',
+		'500': '#000000',
 		'600': '#0060a7',
 		'700': '#004f89',
 		'800': '#003d6a',
@@ -39,7 +39,7 @@ export default function AppConfig(
 		'contrastDefaultColor': 'light',
 		'contrastDarkColors': '50 100 200 A100 A200'
 	});
-	$mdThemingProvider.theme('default').primaryPalette('Big-Bin-Tipp-Palette');
+	$mdThemingProvider.theme('default').primaryPalette('Coolest-Projects-Palette');
 	$mdDateLocaleProvider.formatDate = function(date: Date): string {
 		return moment(date).format('L');
 	};
