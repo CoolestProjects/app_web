@@ -2,14 +2,20 @@
 
 	<div class="md-toolbar-tools">
 
-		<span layout-align="start center" layout="row">
-			<md-button class="md-icon-button" ng-click="toolbarCtrl.toggleSidenav()">
-				<md-icon md-font-icon="material-icons">menu</md-icon>
-			</md-button>
-		</span>
+		<span flex layout="row">
 
-		<span layout-align="center center" layout="row">
-			<img src="../../../assets/img/logo.png" alt="">
+			<span flex="15" layout-align="start center" layout="row">
+				<md-button class="md-icon-button" ng-click="toolbarCtrl.toggleSidenav()">
+					<md-icon md-font-icon="material-icons">menu</md-icon>
+				</md-button>
+			</span>
+
+			<span flex layout-align="center center" layout="row">
+				<img src="../../../assets/img/logo.png" alt="">
+			</span>
+
+			<span flex="15"></span>
+
 		</span>
 
 	</div>
