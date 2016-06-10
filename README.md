@@ -30,3 +30,6 @@ $ npm install -g typescript tslint
 ```
 $ npm install -g typings
 ```
+
+### Deployment
+Execute `npm run deploy` in the root of the project to deploy to Firebase.
