@@ -1,4 +1,35 @@
-<!-- TODO -->
-<div>
-	<h1>Projects</h1>
+<div layout="column" flex class="projects-container" layout-align="center">
+
+	<span ng-repeat="project in projectsCtrl.projects"
+			layout="row" layout-align="center" flex >
+		<md-card flex flex-gt-xs="75" flex-gt-sm="50" flex-gt-md="33" class="project-card">
+
+			<md-card-title>
+				<md-card-title-text layout="row" layout-align="center">
+					<span class="md-display-1">{{project.name}}</span>
+				</md-card-title-text>
+			</md-card-title>
+
+			<md-card-content class="text-grey text-center">
+				<div ng-if="project.coderdojo">
+					<span>Coder Dojo:</span>
+					{{project.coderdojo}}
+				</div>
+				<div ng-if="project.description">
+					<span>Description:</span>
+					{{project.description}}
+				</div>
+				<div ng-if="project.category && project.category !== 'null'">
+					<span>Category:</span>
+					{{project.category}}
+				</div>
+				<div ng-if="project.deskNumber">
+					<span>Desk Number:</span>
+					{{project.deskNumber}}
+				</div>
+			</md-card-content>
+
+		</md-card>
+	</span>
+
 </div>

@@ -31,14 +31,6 @@ export default class AppController {
 
 		moment.locale(this.$locale.id);
 
-		this.$rootScope.$on('$viewContentLoading', () => {
-			this.contentLoaded = false;
-		});	
-
-		this.$scope.$on('$viewContentLoaded', () => {
-			this.contentLoaded = true;
-		});	
-
 	}
 	
 } 
