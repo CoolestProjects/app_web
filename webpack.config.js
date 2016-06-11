@@ -3,6 +3,12 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var AutoPrefixer = require('autoprefixer');
 var path = require('path');
 
+var env;
+
+if (!process.env.NODE_ENV || process.env.NODE_ENV !== 'snapshot' || process.env.NODE_ENV !== 'production') {
+	env = 'snapshot';
+} else { env = process.env.NODE_ENV; }
+
 module.exports = {
 	entry: {
 		'app': './src/app.ts'
@@ -18,7 +24,7 @@ module.exports = {
 	resolve: {
 		extensions: ['', '.webpack.js', '.web.js', '.ts', '.js'],
 		alias: {
-			config: path.join(__dirname, 'src', 'modules', 'config', process.env.NODE_ENV + '.ts')
+			config: path.join(__dirname, 'src', 'modules', 'config', env + '.ts')
 		}
 	},
 	plugins: [
