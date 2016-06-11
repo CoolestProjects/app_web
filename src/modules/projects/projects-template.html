@@ -1,9 +1,24 @@
-<div layout="column" flex class="projects-container" layout-align="center">
+<form>
+  <md-tabs ng-model="category" md-border-bottom="">
+    <md-tab label="All" ng-click="category = ''"></md-tab>
+    <md-tab label="Scratch" ng-click="category = 'Scratch'"></md-tab>
+    <md-tab label="Websites" ng-click="category = 'Websites'"></md-tab>
+    <md-tab label="Games" ng-click="category = 'Games + Web Games'"></md-tab>
+    <md-tab label="Mobile" ng-click="category = 'Mobile'"></md-tab>
+    <md-tab label="Evolution" ng-click="category = 'Evolution'"></md-tab>
+  </md-tabs>
+  <md-input-container class="md-block">
+    <input ng-model="query" type="text" placeholder="Type a keyword to search projects">
+  </md-input-container>
+</form>
 
-	<span ng-repeat="project in projectsCtrl.projects"
-			layout="row" layout-align="center" flex >
+<md-content flex="">
+  <div layout="column" flex class="projects-container" layout-align="center">
+
+	<span ng-repeat="project in projectsCtrl.projects | filter: query | filter: category | orderBy: 'project.deskNumber' "
+        layout="row" layout-align="center" flex>
 		<md-card md-whiteframe="7"
-				flex flex-gt-xs="75" flex-gt-sm="50" flex-gt-md="33" class="project-card">
+             flex flex-gt-xs="75" flex-gt-sm="50" flex-gt-md="33" class="project-card">
 
 			<md-card-title>
 				<md-card-title-text layout="row" layout-align="center">
@@ -13,24 +28,29 @@
 
 			<md-card-content class="text-grey text-center">
 				<div ng-if="project.coderdojo">
-					<span>Coder Dojo:</span>
+					<span class="md-caption">CoderDojo:</span>
 					{{project.coderdojo}}
 				</div>
+        <div ng-if="project.title">
+					<span class="md-caption">Title:</span>
+					{{project.title}}
+				</div>
 				<div ng-if="project.description">
-					<span>Description:</span>
+					<span class="md-caption">Description:</span>
 					{{project.description}}
 				</div>
 				<div ng-if="project.category && project.category !== 'null'">
-					<span>Category:</span>
+					<span class="md-caption">Category:</span>
 					{{project.category}}
 				</div>
 				<div ng-if="project.deskNumber">
-					<span>Desk Number:</span>
+					<span class="md-caption">Desk Number:</span>
 					{{project.deskNumber}}
 				</div>
 			</md-card-content>
 
 		</md-card>
 	</span>
+  </div>
+</md-content>
 
-</div>
