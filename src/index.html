@@ -2,12 +2,25 @@
 <html lang="en">
     <head>
 		<meta charset="utf-8">
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src fonts.googleapis.com 'self' 'unsafe-inline'; font-src 'self' fonts.gstatic.com; media-src *; connect-src ws: 'self' https://register.coolestprojects.org https://coolestprojectsapp.firebaseio.com; img-src 'self' https://firebasestorage.googleapis.com data:">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src fonts.googleapis.com 'self' 'unsafe-inline'; font-src 'self' fonts.gstatic.com; media-src *; connect-src ws: 'self' https://register.coolestprojects.org https://coolestprojectsapp.firebaseio.com; img-src 'self' https://firebasestorage.googleapis.com data:; script-src https://www.gstatic.com http://apis.google.com 'self' 'unsafe-inline'; frame-src https://coolestprojectsapp.firebaseapp.com">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <title>Coolest Projects</title>
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+        <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+        <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAeUUjWZ5x_n_8imv6gXmnHKO3S1BtU3l0",
+            authDomain: "coolestprojectsapp.firebaseapp.com",
+            databaseURL: "https://coolestprojectsapp.firebaseio.com",
+            storageBucket: "coolestprojectsapp.appspot.com",
+        };
+        firebase.initializeApp(config);
+        </script>
+    
     </head>
     <body ng-controller="AppController as appCtrl">
         <ui-view></ui-view>  
