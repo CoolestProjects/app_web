@@ -45,3 +45,10 @@ h1, h2 {
 	@extend .text-grey;
 	@extend .text-center;
 }
+
+/**
+* Text style
+*/
+.text-uppercase {
+  text-transform: uppercase;
+}
