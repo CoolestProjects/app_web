@@ -17,6 +17,7 @@ require('angular-material');
 require('angular-material-data-table');
 require('angular-material-data-table/dist/md-data-table.css');
 require('angularfire');
+require('ng-infinite-scroll');
 
 /**
  * Modules
@@ -38,7 +39,7 @@ import AppController from './app-controller';
 
 angular.module('App', [
 	'ngAnimate', 'ngAria', 'ngMessages', 'ngLocale', 'ngCookies',
-	'ngMaterial', 'ui.router', 'md.data.table', 'firebase',
+	'ngMaterial', 'ui.router', 'infinite-scroll', 'md.data.table', 'firebase',
 	'App.Config', 'App.Nav', 'App.Utils', 'App.Firebase',
 	'App.Home', 'App.Speakers', 'App.Projects', 'App.Schedule'
 ])

@@ -5,6 +5,7 @@
     <md-tab label="Websites" ng-click="category = 'Websites'"></md-tab>
     <md-tab label="Games" ng-click="category = 'Games + Web Games'"></md-tab>
     <md-tab label="Mobile" ng-click="category = 'Mobile'"></md-tab>
+    <md-tab label="Hardware" ng-click="category = 'Hardware'"></md-tab>
     <md-tab label="Evolution" ng-click="category = 'Evolution'"></md-tab>
   </md-tabs>
   <md-input-container class="md-block">
@@ -14,14 +15,14 @@
 
 <md-content flex="">
 
-  <div layout="column" flex class="projects-container" layout-align="center">
+  <div layout="column" infinite-scroll="projectsCtrl.displayMore(10)" infinite-scroll-distance="3" flex class="projects-container" layout-align="center">
     <div layout="row" layout-sm="column" layout-align="space-around">
       <md-progress-circular class="md-accent md-hue-1" md-mode="indeterminate" ng-if="!projectsCtrl.projects"
                             md-diameter="96"></md-progress-circular>
     </div>
 
 
-	<span ng-repeat="project in projectsCtrl.projects | filter: query | filter: category | orderBy: 'project.deskNumber' "
+	<span ng-repeat="project in projectsCtrl.projects | filter: query | filter: category | orderBy: 'project.deskNumber' | limitTo: projectsCtrl.displayed"
         layout="row" layout-align="center" flex>
 
 		<md-card md-whiteframe="7"
@@ -54,6 +55,8 @@
 
 		</md-card>
 	</span>
+
+	<md-button class="md-raised md-primary"ng-click="projectsCtrl.displayMore(50)">Load more...</md-button>
+
   </div>
 </md-content>
-
