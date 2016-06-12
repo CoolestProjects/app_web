@@ -1,11 +1,14 @@
+<form>
+  <md-tabs ng-model="summitIndex" class="cp-font" md-border-bottom="">
+    <md-tab label="Startup &amp; Innovator" ng-click="summitIndex = 0"></md-tab>
+    <md-tab label="Game" ng-click="summitIndex = 1"></md-tab>
+    <md-tab label="Social &amp; Women in Tech" ng-click="summitIndex = 2"></md-tab>
+    <md-tab label="MasterCard Code" ng-click="summitIndex = 3"></md-tab>
+  </md-tabs>
+</form>
+
 <md-list>
-  <md-subheader>Schedule</md-subheader>
-  <md-list-item class="noright">
-    <img/>
-    <p><label>Launchd Summit</label></p>
-  </md-list-item>
-  <md-divider></md-divider>
-  <div ng-repeat="speaker in scheduleCtrl.summits[0].speakers" >
+  <div ng-repeat="speaker in scheduleCtrl.summits[summitIndex || 0].speakers" >
     <md-list-item class="noright">
       <img alt="{{ speaker.name }}" ng-src="{{ speaker.photoUrl }}" class="md-avatar">
       <p>{{ speaker.name }}<br/><span class="md-caption">{{speaker.description}}</span></p>
@@ -15,31 +18,3 @@
     <md-divider></md-divider>
   </div>
 </md-list>
-
-		<!--<md-grid-tile ng-repeat="summit in scheduleCtrl.summits">-->
-
-      <!--<md-card ng-repeat="speaker in summit.tabs">-->
-        <!--<md-card-title>-->
-
-          <!--<md-card-title-text layout="row" layout-align="center center">-->
-            <!--<p class="md-headline text-uppercase">{{speaker.name}}</p>-->
-          <!--</md-card-title-text>-->
-
-          <!--<md-card-title-media>-->
-            <!--<div class="card-media">-->
-              <!--<img hide-xs ng-src="{{speaker.photoUrl}}" class="md-card-image md-media-lg">-->
-              <!--<img hide show-xs ng-src="{{speaker.photoUrl}}" class="md-card-image md-media-sm">-->
-            <!--</div>-->
-          <!--</md-card-title-media>-->
-
-        <!--</md-card-title>-->
-
-        <!--<md-card-content class="text-grey text-right">-->
-          <!--<p class="md-body-2 text-left text-bold">{{speaker.description}}</p>-->
-          <!--<p class="md-body-1 text-left">{{speaker.talkTitle}}</p>-->
-          <!--<p class="md-caption text-left"><span>{{speaker.summitTimes}}</span>&nbsp;&nbsp;<span>{{speaker.summit}} Summit</span></p>-->
-        <!--</md-card-content>-->
-      <!--</md-card>-->
-		<!--</md-grid-tile>-->
-<!--</md-list>-->
-
