@@ -38,7 +38,7 @@ import AppController from './app-controller';
 
 angular.module('App', [
 	'ngAnimate', 'ngAria', 'ngMessages', 'ngLocale', 'ngCookies',
-	'ngMaterial', 'ui.router', 'infinite-scroll', 'md.data.table', 'firebase',
+	'ngMaterial', 'ui.router', 'md.data.table', 'firebase',
 	'App.Config', 'App.Nav', 'App.Utils', 'App.Firebase',
 	'App.Home', 'App.Speakers', 'App.Projects'
 ])
