@@ -22,7 +22,7 @@
 
 			<md-card-title>
 				<md-card-title-text layout="row" layout-align="center">
-					<span class="md-headline text-uppercase">{{project.name}}</span>
+					<span class="md-headline text-uppercase cp-font">{{project.name}}</span>
 				</md-card-title-text>
 			</md-card-title>
 
@@ -31,21 +31,17 @@
 					<span class="md-caption">CoderDojo:</span>
 					{{project.coderdojo}}
 				</div>
-        <div ng-if="project.title">
-					<span class="md-caption">Title:</span>
-					{{project.title}}
-				</div>
 				<div ng-if="project.description">
 					<span class="md-caption">Description:</span>
-					{{project.description}}
+					<span class="md-body-2">{{project.description}}</span>
 				</div>
 				<div ng-if="project.category && project.category !== 'null'">
 					<span class="md-caption">Category:</span>
-					{{project.category}}
+					<span class="md-body-2">{{project.category}}</span>
 				</div>
 				<div ng-if="project.deskNumber">
 					<span class="md-caption">Desk Number:</span>
-					{{project.deskNumber}}
+					<span class="md-body-2">{{project.deskNumber}}</span>
 				</div>
 			</md-card-content>
 
