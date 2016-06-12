@@ -13,3 +13,6 @@ www/
 
 # VS Code
 .vscode/
+
+# Webstorm
+.idea/*
