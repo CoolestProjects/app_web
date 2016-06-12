@@ -1,8 +1,14 @@
+<form>
+  <md-input-container class="md-block">
+    <input ng-model="query" type="text" placeholder="Type a keyword to search speakers">
+  </md-input-container>
+</form>
+
   <md-grid-list md-cols-xs="1" md-cols-sm="2" md-cols-md="3" md-cols-lg="3" md-cols-gt-lg="4"
                 md-row-height-xs="300px" md-row-height-sm="400px" md-row-height-md="350px" md-row-height-lg="350px"
     md-gutter="2">
 
-		<md-grid-tile ng-repeat="speaker in speakersCtrl.speakers">
+		<md-grid-tile ng-repeat="speaker in speakersCtrl.speakers | filter: query">
 
       <md-card>
         <md-card-title>
