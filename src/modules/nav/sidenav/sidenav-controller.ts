@@ -44,4 +44,9 @@ export default class AdminSidenavController {
 		this.closeSidenav();
 	}
 
+	public goToScheduleState(): void {
+		this.$state.go('App.Nav.Schedule');
+		this.closeSidenav();
+	}
+
 }
