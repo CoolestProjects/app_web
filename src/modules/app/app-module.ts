@@ -29,6 +29,7 @@ require('../firebase/firebase-module.ts');
 require('../home/home-module.ts');
 require('../speakers/speakers-module.ts');
 require('../projects/projects-module.ts');
+require('../schedule/schedule-module.ts');
 
 /**
  * Imports
@@ -40,7 +41,7 @@ angular.module('App', [
 	'ngAnimate', 'ngAria', 'ngMessages', 'ngLocale', 'ngCookies',
 	'ngMaterial', 'ui.router', 'md.data.table', 'firebase',
 	'App.Config', 'App.Nav', 'App.Utils', 'App.Firebase',
-	'App.Home', 'App.Speakers', 'App.Projects'
+	'App.Home', 'App.Speakers', 'App.Projects', 'App.Schedule'
 ])
 	.config(AppConfig)
 	.controller('AppController', AppController);

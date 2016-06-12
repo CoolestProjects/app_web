@@ -1,0 +1,20 @@
+<form>
+  <md-tabs ng-model="summitIndex" class="cp-font" md-border-bottom="">
+    <md-tab label="Startup &amp; Innovator" ng-click="summitIndex = 0"></md-tab>
+    <md-tab label="Game" ng-click="summitIndex = 1"></md-tab>
+    <md-tab label="Social &amp; Women in Tech" ng-click="summitIndex = 2"></md-tab>
+    <md-tab label="MasterCard Code" ng-click="summitIndex = 3"></md-tab>
+  </md-tabs>
+</form>
+
+<md-list>
+  <div ng-repeat="speaker in scheduleCtrl.summits[summitIndex || 0].speakers" >
+    <md-list-item class="noright">
+      <img alt="{{ speaker.name }}" ng-src="{{ speaker.photoUrl }}" class="md-avatar">
+      <p>{{ speaker.name }}<br/><span class="md-caption">{{speaker.description}}</span></p>
+      <p>{{ speaker.talkTitle}}</p>
+      <p>{{ speaker.summitTimes}}</p>
+    </md-list-item>
+    <md-divider></md-divider>
+  </div>
+</md-list>
