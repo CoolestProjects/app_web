@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700);
 
 $sans: 'Open Sans', sans-serif;
+
 $light: 300;
 $normal: 400;
 $semiBold: 600;
@@ -52,3 +53,9 @@ h1, h2 {
 .text-uppercase {
   text-transform: uppercase;
 }
+
+
+.cp-font {
+  font-family: 'mail_ray_stuffregular', 'Open Sans', sans-serif;
+}
+
