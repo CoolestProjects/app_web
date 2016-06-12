@@ -54,7 +54,14 @@
 		"./src/modules/speakers/speakers-module.ts",
 		"./src/modules/speakers/speakers-config.ts",
 		"./src/modules/speakers/speakers-controller.ts",
-		"./src/modules/speakers/speakers-service.ts"
+		"./src/modules/speakers/speakers-service.ts",
+
+        "./src/modules/schedule/index.ts",
+        "./src/modules/schedule/schedule-service.ts",
+        "./src/modules/schedule/schedule-module.ts",
+        "./src/modules/schedule/schedule-config.ts",
+        "./src/modules/schedule/schedule-controller.ts",
+        "./src/modules/schedule/schedule-service.ts"
 		
 	]
 }
