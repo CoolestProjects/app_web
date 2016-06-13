@@ -7,14 +7,25 @@
   </md-tabs>
 </form>
 
-<md-list>
-  <div ng-repeat="speaker in scheduleCtrl.summits[summitIndex || 0].speakers" >
-    <md-list-item class="noright">
-      <img alt="{{ speaker.name }}" ng-src="{{ speaker.photoUrl }}" class="md-avatar">
-      <p>{{ speaker.name }}<br/><span class="md-caption">{{speaker.description}}</span></p>
-      <p>{{ speaker.talkTitle}}</p>
-      <p>{{ speaker.summitTimes}}</p>
-    </md-list-item>
-    <md-divider></md-divider>
-  </div>
-</md-list>
+<span ng-repeat="speaker in scheduleCtrl.summits[summitIndex || 0].speakers" layout="column" flex>
+	<span layout="row">
+		<span layout>
+			<img alt="{{speaker.name}}" ng-src="{{speaker.photoUrl}}" class="img-avatar img-small">
+		</span>
+		<span layout="column" layout-gt-sm="row" flex>
+			<span layout="column" flex>
+				<span class="md-body-2">{{speaker.name}}</span>
+				<span class="md-caption text-grey">{{speaker.description}}</span>
+			</span>
+			<span layout="column" layout-gt-sm="row" flex-gt-sm>
+				<span layout="row" flex-gt-sm layout-align-gt-sm="start center">
+					<span class="md-body-2">{{speaker.talkTitle}}</span>
+				</span>
+				<span layout="row" flex-gt-sm layout-align-gt-sm="end center">
+					<span class="md-caption text-grey">{{speaker.summitTimes}}</span>
+				</span>
+			</span>
+		</span>
+	</span>
+	<md-divider></md-divider>
+</span>

@@ -24,8 +24,3 @@ $screen-xl-min: 1920px;
 @mixin xl() {
 	@include media-query($layout-breakpoint-lg) { @content }
 }
-
-.img-responsive {
-	max-width: 100%;
-	height: auto;
-}
