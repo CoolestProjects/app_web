@@ -11,33 +11,36 @@
   </md-input-container>
 </form>
 
-  <md-grid-list md-cols-xs="1" md-cols-sm="2" md-cols-md="3" md-cols-lg="3" md-cols-gt-lg="4"
-                md-row-height-xs="300px" md-row-height-sm="400px" md-row-height-md="350px" md-row-height-lg="350px"
-    md-gutter="2">
+  <md-grid-list
+		md-cols-xs="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="4"
+		md-row-height-xs="300px" md-row-height-sm="400px" md-row-height-gt-sm="350px"
+		md-gutter="2">
 
-		<md-grid-tile ng-repeat="speaker in speakersCtrl.speakers | filter: query | filter: summit">
+	<md-grid-tile ng-repeat="speaker in speakersCtrl.speakers | filter: query | filter: summit">
+		<md-card flex>
+			<md-card-title layout="row">
 
-      <md-card>
-        <md-card-title>
+				<md-card-title-text layout="row" layout-align="center center">
+					<p class="md-headline text-uppercase">{{speaker.name}}</p>
+				</md-card-title-text>
 
-          <md-card-title-text layout="row" layout-align="center center">
-            <p class="md-headline text-uppercase">{{speaker.name}}</p>
-          </md-card-title-text>
+				<md-card-title-media>
+					<div class="card-media">
+					<img hide-xs ng-src="{{speaker.photoUrl}}" class="md-card-image md-media-lg">
+					<img hide show-xs ng-src="{{speaker.photoUrl}}" class="md-card-image md-media-sm">
+					</div>
+				</md-card-title-media>
 
-          <md-card-title-media>
-            <div class="card-media">
-              <img hide-xs ng-src="{{speaker.photoUrl}}" class="md-card-image md-media-lg">
-              <img hide show-xs ng-src="{{speaker.photoUrl}}" class="md-card-image md-media-sm">
-            </div>
-          </md-card-title-media>
+			</md-card-title>
 
-        </md-card-title>
-
-        <md-card-content class="text-grey text-right">
-          <p class="md-body-2 text-left text-bold">{{speaker.description}}</p>
-          <p class="md-body-1 text-left">{{speaker.talkTitle}}</p>
-          <p class="md-caption text-left"><span>{{speaker.summitTimes}}</span>&nbsp;&nbsp;<span>{{speaker.summit}} Summit</span></p>
-        </md-card-content>
-      </md-card>
-		</md-grid-tile>
+			<md-card-content class="text-grey text-right">
+				<p class="md-body-2 text-left text-bold">{{speaker.description}}</p>
+				<p class="md-body-1 text-left">{{speaker.talkTitle}}</p>
+				<p class="md-caption text-left">
+					<span>{{speaker.summitTimes}}</span>&nbsp;&nbsp;
+					<span>{{speaker.summit}} Summit</span>
+				</p>
+			</md-card-content>
+		</md-card>
+	</md-grid-tile>
 </md-grid-list>
