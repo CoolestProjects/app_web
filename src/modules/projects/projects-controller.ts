@@ -2,7 +2,7 @@
 import {IHttpPromiseCallbackArg} from 'angular';
 import {IProjectsService, IProject} from './';
 
-angular.module('infinite-scroll').value('THROTTLE_MILLISECONDS', 250)
+angular.module('infinite-scroll').value('THROTTLE_MILLISECONDS', 250);
 
 export default class ProjectsController {
 
