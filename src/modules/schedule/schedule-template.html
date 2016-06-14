@@ -7,25 +7,40 @@
   </md-tabs>
 </form>
 
-<span ng-repeat="speaker in scheduleCtrl.summits[summitIndex || 0].speakers" layout="column" flex>
-	<span layout="row">
-		<span layout>
-			<img alt="{{speaker.name}}" ng-src="{{speaker.photoUrl}}" class="img-avatar img-small">
-		</span>
-		<span layout="column" layout-gt-sm="row" flex>
-			<span layout="column" flex>
-				<span class="md-body-2">{{speaker.name}}</span>
-				<span class="md-caption text-grey">{{speaker.description}}</span>
+<span
+		ng-init="scheduleCtrl.isFullscreen = false"
+		fullscreen active="scheduleCtrl.isFullscreen">
+	<span ng-repeat="speaker in scheduleCtrl.summits[summitIndex || 0].speakers"
+			layout="column" flex>
+		<span layout="row">
+			<span layout>
+				<img alt="{{speaker.name}}" ng-src="{{speaker.photoUrl}}" class="img-avatar img-small">
 			</span>
-			<span layout="column" layout-gt-sm="row" flex-gt-sm>
-				<span layout="row" flex-gt-sm layout-align-gt-sm="start center">
-					<span class="md-body-2">{{speaker.talkTitle}}</span>
+			<span layout="column" layout-gt-sm="row" flex>
+				<span layout="column" flex>
+					<span class="md-body-2">{{speaker.name}}</span>
+					<span class="md-caption text-grey">{{speaker.description}}</span>
 				</span>
-				<span layout="row" flex-gt-sm layout-align-gt-sm="end center">
-					<span class="md-caption text-grey">{{speaker.summitTimes}}</span>
+				<span layout="column" layout-gt-sm="row" flex-gt-sm>
+					<span layout="row" flex-gt-sm layout-align-gt-sm="start center">
+						<span class="md-body-2">{{speaker.talkTitle}}</span>
+					</span>
+					<span layout="row" flex-gt-sm layout-align-gt-sm="end center">
+						<span class="md-caption text-grey">{{speaker.summitTimes}}</span>
+					</span>
 				</span>
 			</span>
 		</span>
+		<md-divider></md-divider>
 	</span>
-	<md-divider></md-divider>
 </span>
+
+<div layout="row">
+	<md-button class="md-primary md-raised md-fab md-fab-bottom-right"
+			ng-click="scheduleCtrl.isFullscreen = !scheduleCtrl.isFullscreen">
+		<md-icon ng-if="!scheduleCtrl.isFullscreen"
+				md-font-icon="material-icons" class="text-white">fullscreen</md-icon>
+		<md-icon ng-if="scheduleCtrl.isFullscreen"
+				md-font-icon="material-icons" class="text-white">fullscreen_exit</md-icon>
+	</md-button>
+</div>
