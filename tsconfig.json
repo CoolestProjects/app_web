@@ -48,6 +48,9 @@
 		"./src/modules/home/home-module.ts",
 		"./src/modules/home/home-config.ts",
 		"./src/modules/home/home-controller.ts",
+
+		"./src/modules/fullscreen/fullscreen-module.ts",
+		"./src/modules/fullscreen/fullscreen-directive.ts",
 		
 		"./src/modules/speakers/index.ts",
 		"./src/modules/speakers/speakers-service.ts",
